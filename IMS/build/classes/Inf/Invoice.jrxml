@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="906825df-af1f-45a1-9e39-a84dd7a84ad6">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="413"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+*
+FROM
+     `insurance_plcy_data` insurance_plcy_data]]>
+	</queryString>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vehi_number" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="address" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ins_date" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="exp_date" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NCB" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fin_company" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TP_cover" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="full_csco_cover" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SRCC_cover" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TC_cover" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="finl_premium" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="paid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="comments" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ANP_TP" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ANP_full_casco" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ANP_SRCC" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ANP_TC" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cust_pin" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mark_pin" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="plcy_number" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="89" splitType="Stretch">
+			<staticText>
+				<reportElement x="211" y="12" width="135" height="58" uuid="a88e9150-ce03-48b0-8c62-7a4692eee5b0"/>
+				<textElement>
+					<font fontName="Times New Roman" size="44"/>
+				</textElement>
+				<text><![CDATA[Invoice]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="637" splitType="Stretch">
+			<textField>
+				<reportElement x="230" y="221" width="100" height="20" uuid="020725ad-6837-427b-aa24-38f8de900541"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{TP_cover}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="221" width="100" height="20" uuid="93a6901f-6af6-4cb0-9fec-979676c311fb"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Third party cover]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="418" y="221" width="100" height="20" uuid="843936c9-723d-47b7-b093-5ed7b49f0777"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ANP_TP}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="281" width="100" height="20" uuid="c12380b3-e194-4315-a2a6-e3b71f899cfb"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Full casco]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="230" y="281" width="100" height="20" uuid="de851d43-bff6-4ad9-8f9f-6f746dedf024"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{full_csco_cover}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="418" y="281" width="100" height="20" uuid="ae4df457-40fa-4e56-a468-c74626b91416"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ANP_full_casco}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="345" width="100" height="20" uuid="65ecba4e-b47a-4a75-a6d2-af73483f84c3"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[SRCC Cover]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="230" y="345" width="100" height="20" uuid="b70065c7-2218-411c-bd2c-5deb014e5712"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{SRCC_cover}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="418" y="345" width="100" height="20" uuid="ec0e1b12-a57c-4155-9a8c-b57b7206d8de"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ANP_SRCC}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="412" width="100" height="20" uuid="4a66d435-8718-49e7-9aae-ab06a050d524"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Terrorism Cover]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="230" y="412" width="100" height="20" uuid="b8538de7-814a-47ad-8803-096928219e66"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{TC_cover}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="418" y="412" width="100" height="20" uuid="75163e82-4d87-481c-b1e8-f6cde74bfcae"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ANP_TC}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="230" y="562" width="188" height="20" uuid="701e6e8a-e532-4ad9-a621-193607a0bc70"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Final Premium      = ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="418" y="562" width="100" height="20" uuid="6e69c54f-f6de-47dc-8e86-92c6883b1e96"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{finl_premium}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="167" y="39" width="100" height="20" uuid="878140fd-ff3d-43fc-ac46-d05d87579bd0"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Customer name :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="288" y="39" width="100" height="20" uuid="9945f52e-7e42-46b7-bb09-b18864a9c922"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="167" y="79" width="100" height="20" uuid="8d9ecd56-e262-40ef-a97e-49bae824dbc5"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Vehicle number :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="288" y="79" width="100" height="20" uuid="e8ac4c9c-21ad-4e46-a662-c03db262345c"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{vehi_number}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="167" y="117" width="100" height="20" uuid="a6879ed1-cfbc-4b17-819b-5f632e45c225"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Policy number :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="288" y="117" width="100" height="20" uuid="43498251-c68f-449a-9a94-8bc4697929c3"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{plcy_number}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="10" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="9" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="9" splitType="Stretch"/>
+	</summary>
+</jasperReport>
